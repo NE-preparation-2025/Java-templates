@@ -32,10 +32,10 @@ public class UserService {
     private final VehicleRepository vehicleRepository;
     private final PasswordEncoder passwordEncoder;
 
-    @Value("${admin.email:amrieangele@gmail.com}")
+    @Value("${admin.email:irisarolande125@gmail.com}")
     private String adminEmail;
 
-    @Value("${admin.password:Angele@2025}")
+    @Value("${admin.password:Irisa@2025}")
     private String adminPassword;
 
     public UserResponseDto createUser(RegisterRequestDto user) {
@@ -56,11 +56,11 @@ public class UserService {
         if (!userRepository.findByEmail(adminEmail).isPresent()) {
             User adminUser = new User();
             adminUser.setId(UUID.randomUUID());
-            adminUser.setFirstName("Angele");
-            adminUser.setLastName("Marie");
+            adminUser.setFirstName("Irisa");
+            adminUser.setLastName("Rolande");
             adminUser.setEnabled(true);
             adminUser.setStatus(Status.ACTIVE);
-            adminUser.setPhoneNumber("0798978831");
+            adminUser.setPhoneNumber("0791790062");
             adminUser.setNationalId("1200670162551080");
             adminUser.setEmail(adminEmail);
             // Use the password from environment variables, encoded
@@ -68,9 +68,9 @@ public class UserService {
             adminUser.setRole(Role.ROLE_ADMIN);
 
             userRepository.save(adminUser);
-            log.info("Admin user 'Angele' created.");
+            log.info("Admin user 'Irisa' created.");
         } else {
-            log.info("Admin user 'Angele' already exists.");
+            log.info("Admin user 'Irisa' already exists.");
         }
     }
 

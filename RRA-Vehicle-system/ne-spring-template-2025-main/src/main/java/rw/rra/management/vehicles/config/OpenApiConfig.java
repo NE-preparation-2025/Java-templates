@@ -36,8 +36,8 @@ public class OpenApiConfig {
                                 ))
                 .info(
                         new Info()
-                                .title("RRA Vehicle Management System")
-                                .version("1.0.0").description("This is the application developed by Angele Marie"));
+                                .title("System of Rwanda Revenue Authority ")
+                                .version("1.0.0").description(" application developed by Irisa Rolande 2025"));
     }
 
 }
